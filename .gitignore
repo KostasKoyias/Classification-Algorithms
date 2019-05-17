@@ -2,5 +2,6 @@ Extra
 *.sh
 *.pdf
 *.txt
+*~
 main/rsrc
 !main/rsrc/data.xlsx
