@@ -11,7 +11,7 @@ function [trainSet, testSet, actualResult] = getSets(data, i, setSize)
     
     % extract testSet from data set putting the class attribute in actualResult 
     testSet = data(i:setEnd, :);
-    actualResult = transpose(testSet(:, cols:cols))*10;
+    actualResult = transpose(testSet(:, cols));
     testSet = testSet(:, 1:cols-1);
 end
 
