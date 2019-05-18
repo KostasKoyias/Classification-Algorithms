@@ -1,3 +1,15 @@
+function data = preProcessData(data)
+    % pre-process data
+    cols = size(data, 2);
+    
+    % normalize data attributes, range is [1-10] so divide by 10
+    % but do not modify labels, so exlude last column
+    data(:, 1:cols-1) = data(:, 1:cols-1)./10;
+    
+    % replace missing attribute values with the most common one
+    data = fillEmpty(data);
+end
+
 function data = fillEmpty(data)  
     % replace missing attribute values of each field with the most common
     
