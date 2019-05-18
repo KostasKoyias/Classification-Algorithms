@@ -10,10 +10,5 @@ function [accuracy, sensitivity, specificity] = evaluateClassifier(stats)
     specificity = trueNegative / (trueNegative + falsePositive);
 
     % display results
-    fprintf("Records: %d\n", records);    
-    disp("-------------------");
-    fprintf("Accuracy: %.2f\nSensitivity: %.2f\nSpecificity: %.2f\n", accuracy, sensitivity, specificity);
-    disp("-------------------");
-    fprintf("truePositive: %d\ntrueNegative: %d\n", truePositive, trueNegative);
-    fprintf("falsePositive: %d\nfalseNegative: %d\n", falsePositive, falseNegative);
+    displayResults([records, stats, accuracy, sensitivity, specificity]);
 end
